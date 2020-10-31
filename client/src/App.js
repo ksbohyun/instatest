@@ -7,9 +7,14 @@ import Header from "./components/layout/Header";
 import Home from "./components/pages/Home";
 import UserContext from "./context/UserContext";
 
-import "./style.css";
+// import "./style.css";
+import "./components/scss/_Reset.scss";
+import DirectMessage from "./components/pages/DirectMessage";
+import AppContext from "./context/AppContext";
+import Explore from "./components/pages/Explore";
 
 function App() {
+  const [showHeader, setShowHeader] = useState(false);
   const [userData, setUserData] = useState({
     token: undefined,
     user: undefined,
@@ -44,14 +49,22 @@ function App() {
     <>
       <BrowserRouter>
         <UserContext.Provider value={{ userData, setUserData }}>
-          <Header />
-          <div className="container">
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route path="/login" component={Login} />
-              <Route path="/register" component={Register} />
-            </Switch>
-          </div>
+          <AppContext.Provider value={{ showHeader, setShowHeader }}>
+            {showHeader && (
+              <>
+                <Header />
+              </>
+            )}
+            <div className="container">
+              <Switch>
+                <Route path="/login" component={Login} />
+                <Route exact path="/" component={Home} />
+                <Route path="/register" component={Register} />
+                <Route path="/directmessage" component={DirectMessage} />
+                <Route path="/Explore" component={Explore} />
+              </Switch>
+            </div>
+          </AppContext.Provider>
         </UserContext.Provider>
       </BrowserRouter>
     </>

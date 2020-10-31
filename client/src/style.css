@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap"); */
 
 /* css 리셋 */
 
-* {
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -36,10 +36,10 @@ p,
 ul,
 ol {
   margin: 1em 0;
-}
+} */
 
 /* general */
-body {
+/* body {
   font-family: "Roboto", sans-serif;
 }
 
@@ -50,11 +50,11 @@ body {
 .container {
   margin: 0 auto;
   max-width: 900px;
-}
+} */
 
 /* header */
 
-#header {
+/* #header {
   height: 50px;
   display: flex;
   align-items: center;
@@ -82,10 +82,10 @@ body {
 
 #header .auth-options button:hover {
   background-color: darkgray;
-}
+} */
 
 /* form */
-
+/* 
 .form label,
 .form input {
   display: block;
@@ -122,11 +122,11 @@ body {
   border-radius: 5px;
   background-color: #6bbcff;
   font-size: 1.1rem;
-}
+} */
 
 /* error notice */
 
-.error-notice {
+/* .error-notice {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -142,11 +142,11 @@ body {
   background-color: red;
   color: white;
   border-radius: 50%;
-}
+} */
 
 /* media queries */
 
-@media screen and (max-width: 550px) {
+/* @media screen and (max-width: 550px) {
   #header .title {
     font-size: 0.8rem;
   }
@@ -155,4 +155,4 @@ body {
     padding: 0 0.5rem;
     font-size: 0.7rem;
   }
-}
+} */

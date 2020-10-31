@@ -31,3 +31,4 @@ mongoose.connect(
 // 라우트 설정
 app.use("/users", require("./routes/userRouter"));
 app.use("/todos", require("./routes/todoRouter"));
+app.use("/content", require("./routes/contentRouter"));

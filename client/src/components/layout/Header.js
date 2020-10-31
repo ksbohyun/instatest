@@ -7,7 +7,7 @@ const Header = () => {
     <>
       <header id="header">
         <Link to="/">
-          <h1 className="title">auth test</h1>
+          <h1 className="title">HBJstagram</h1>
         </Link>
         <AuthOptions />
       </header>

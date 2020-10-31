@@ -1,0 +1,132 @@
+//자주쓰이는 중복되는 컬러 선언
+$instaBg: #fafafa;
+$loginForm: #dbdbdb;
+
+body {
+  background-color: $instaBg;
+}
+
+.dm {
+  background: #ffffff;
+  width: 935px;
+  height: 875px;
+  margin: 20px auto 0;
+  border: 1px solid $loginForm;
+  border-radius: 5px;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+
+  &--list {
+    width: 350px;
+    overflow: hidden;
+    height: 100%;
+    border-right: 1px solid $loginForm;
+    &__head {
+      width: 100%;
+      height: 64px;
+      border-bottom: 1px solid $loginForm;
+      position: relative;
+    }
+    &__headTit {
+      text-align: center;
+      font-size: 17px;
+      color: #262626;
+      font-weight: 600;
+      line-height: 64px;
+    }
+    &__headBtn {
+      position: absolute;
+      right: 15px;
+      top: 20px;
+    }
+    &__people {
+      li {
+        padding: 8px 20px;
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      li:hover {
+        background: $instaBg;
+      }
+    }
+    &__idBox {
+      position: absolute;
+      top: 14px;
+      left: 88px;
+      font-size: 13px;
+    }
+    &__profile {
+      border-radius: 50%;
+      border: 1px solid #c6c6c6;
+      width: 56px;
+      height: 56px;
+      box-sizing: border-box;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &__id {
+      color: #262626;
+    }
+    &__message {
+      color: #8e8e8e;
+      max-width: 200px;
+      overflow: hidden;
+      margin-top: 4px;
+    }
+    &__date {
+      position: relative;
+      margin-left: 12px;
+      &::before {
+        position: absolute;
+        content: "";
+        background: #ab6426;
+        top: 7px;
+        left: -7px;
+        width: 2px;
+        height: 2px;
+      }
+    }
+  }
+
+  &--chat {
+    text-align: center;
+    width: 584px;
+    height: 100%;
+    position: relative;
+    &__box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%);
+      width: 100%;
+
+      input {
+        background-color: #0095f6;
+        border: none;
+        color: #fff;
+        width: 108px;
+        height: 30px;
+        font-size: 14px;
+        font-weight: 700;
+        border-radius: 3px;
+        line-height: 30px;
+        cursor: pointer;
+        margin-top: 28px;
+      }
+    }
+    h2 {
+      font-size: 21px;
+      font-weight: 500;
+    }
+    p {
+      font-size: 14px;
+      color: #8e8e8e;
+      margin-top: 7px;
+    }
+  }
+}
