@@ -1,0 +1,57 @@
+Fork 한 repository 최신으로 동기화하기
+
+1. 현재 자신의 레포지토리를 원격레포지토리에 추가한다.
+>> git remote -v
+
+2. 동기화할 보현이형 repository를 upstream이라는 이름으로 추가한다.
+>> git remote add upstream https://github.com/ksbohyun/instatest.git
+
+3. upstream repository가 제대로 추가되었는지 확인한다.
+>> git remote -v 시
+upstream https://github.com/ksbohyun/instatest.git(fetch)
+upstream https://github.com/ksbohyun/instatest.git(push)
+가 뜨면 제대로 된 것
+
+4. upstream 레포지토리(보현이형 레포지토리)로부터 최신 업데이트를 가져온다.
+>> git fetch upstream
+
+5. upstream repo의 master branch에서 나의 local master branch로 이동 후에, merge(병합) 한다.
+>> git checkout master
+>> git merge upstream/master
+
+6. 내 로컬 레포지토리에 있는 최신화 된 자료를 원격 저장소 remote repository에 올린다.
+>> git push origin master
+
+---------------------------------------------------------------------------------------------------------------------------------------
+branch 만들어서 branch에 push 하기!
+
+1. 현재 깃 브랜치 확인
+>> git branch
+
+2. (feature/chat) 이라는 이름의 브랜치 만들기 
+>> git branch feature/chat
+
+3. 브랜치 체크아웃 (그 브랜치로 이동)
+>> git checkout feature/chat
+-- Switched to branch 'feature/chat'
+
+4. 브랜치 스테이지에 add 하기
+>> git add .
+
+5. 브랜치 커밋 남기기
+>> git commit -m "branch추가!"
+
+6. 원격 저장소에 푸쉬하기
+>> git push
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+branch를 기존 master에 병합(merge)/ 삭제(delete)하기!
+
+1. 현재 git의 장소를 master로 이동(checkout)
+>> git checkout master(현재 마스터 브랜치 명)
+
+2. 병합하기(master에서 feature/chat 브랜치를 병합)
+>> git merge feature/master
+
+3. 만들었던 브랜치 삭제하기
+>> git branch -d feature/master
