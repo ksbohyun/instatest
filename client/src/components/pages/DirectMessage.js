@@ -1,8 +1,8 @@
-import React, { useContext, useEffect } from "react";
-import { useHistory } from "react-router-dom";
-import AppContext from "../../context/AppContext";
-import UserContext from "../../context/UserContext";
-import "../scss/DirectMessage.scss";
+import React, { useContext, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
+import AppContext from '../../context/AppContext';
+import UserContext from '../../context/UserContext';
+import '../scss/DirectMessage.scss';
 
 // default는 js 파일 하나당 하나씩만 넣을 수 있다.
 const DirectMessage = () => {
@@ -12,7 +12,7 @@ const DirectMessage = () => {
   useEffect(() => {
     if (!userData.user) {
       setShowHeader(false);
-      history.push("/login");
+      history.push('/login');
     }
   });
   return (
@@ -75,7 +75,7 @@ const DirectMessage = () => {
 
       {/* DM 내용 */}
       <div className="dm--chat">
-        <div className="dm--chat__box">
+        {/* <div className="dm--chat__box">
           <h2>내 메시지</h2>
           <p>친구나 그룹에 비공개 사진과 메시지를 보내보세요.</p>
           <input
@@ -83,6 +83,19 @@ const DirectMessage = () => {
             value="메시지 보내기"
             placeholder="메시지 보내기"
           />
+        </div> */}
+        {/* //DM 내용 */}
+        <div className="dm--list__head">
+          <button
+            type="button"
+            name="dmBtn"
+            className="dm--list__headBtn__right"
+          >
+            <div className="dm--list__profile__big">
+              <img src="/index/img_profile_01.png" alt="@@님의 프로필 사진" />
+            </div>
+            <img src="/index/icon/icon_i.jpg" alt="새로 쓰기" />
+          </button>
         </div>
       </div>
       {/* //DM 내용 */}
