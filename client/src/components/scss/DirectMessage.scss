@@ -39,6 +39,11 @@ body {
       position: absolute;
       right: 15px;
       top: 20px;
+      &__right {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+      }
     }
     &__people {
       li {
@@ -69,6 +74,7 @@ body {
         height: 100%;
       }
     }
+
     &__id {
       color: #262626;
     }
@@ -83,7 +89,7 @@ body {
       margin-left: 12px;
       &::before {
         position: absolute;
-        content: "";
+        content: '';
         background: #ab6426;
         top: 7px;
         left: -7px;

@@ -1,8 +1,8 @@
-import React, { useContext, useEffect } from "react";
-import { useHistory } from "react-router-dom";
-import AppContext from "../../context/AppContext";
-import UserContext from "../../context/UserContext";
-import "../scss/DirectMessage.scss";
+import React, { useContext, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
+import AppContext from '../../context/AppContext';
+import UserContext from '../../context/UserContext';
+import '../scss/DirectMessage.scss';
 
 // default는 js 파일 하나당 하나씩만 넣을 수 있다.
 const DirectMessage = () => {
@@ -12,7 +12,7 @@ const DirectMessage = () => {
   useEffect(() => {
     if (!userData.user) {
       setShowHeader(false);
-      history.push("/login");
+      history.push('/login');
     }
   });
   return (
